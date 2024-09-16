@@ -1,58 +1,105 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="container-fluid p-0">
+    <!-- Haut de la page avec un fond violet -->
+    <div class="row custom-bg-top justify-content-center align-items-center">
+      <div class="col-md-6 text-center">
+        <div class="title-container">
+          <br>
+          <h1 class="title-text">CSV</h1>
+          <h1 class="title-text">Nettoyeur de Données</h1>
+          <h6 class="subtitle-text" style="color:black;">Fusionnez, Combinez, Vérifiez, Supprimez,... vos fichiers CSV</h6>
+        </div>
+        <div class="features-container mt-4 d-flex justify-content-center">
+          <div class="feature">
+            <div class="feature-icon-container">
+              <i class="fas fa-user feature-icon"></i>
+            </div>
+            <p class="feature-text">Facilité d'utilisation</p>
+            <p class="feature-description">Une interface intuitive pour une utilisation sans tracas.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon-container">
+              <i class="fas fa-clock feature-icon"></i>
+            </div>
+            <p class="feature-text">Gain de temps</p>
+            <p class="feature-description">Traitez rapidement vos fichiers volumineux en quelques clicks.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon-container">
+              <i class="fas fa-check-circle feature-icon"></i>
+            </div>
+            <p class="feature-text">Qualité de résultat</p>
+            <p class="feature-description">Des résultats précis et fiables pour vos analyses.</p>
+          </div>
+        </div>
+         <!-- Sous-titre supplémentaire -->
+         <div class="title-container">
+            <br>
+            <h1></h1>
+            <p class="subtitle-text">Pour vos fichiers CSV de petite, moyenne ou grande taille, facilitez-vous la vie.</p>
+            <h6 class="subtitle-text" style="color:black;">Utilisez data cleaner❤️</h6>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Bas de la page avec des cases blanches -->
+    <div class="footer-cases">
+      <div class="case">
+        <div class="case-content">
+          <span class="case-number">1</span>
+          <p>Importation de fichier(s)</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-content">
+          <span class="case-number">2</span>
+          <p>Choix de l'opération</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-content">
+          <span class="case-number">3</span>
+          <p>Lancer le traitement</p>
+        </div>
+      </div>
+      <div class="case">
+        <div class="case-content">
+          <span class="case-number">4</span>
+          <p>Téléchargement/Confirmation </p>
+        </div>
+      </div>
+    </div>
+    <!-- Pied de page -->
+    <div class="footer">
+      <div class="footer-content">
+        <!-- Les cinq listes -->
+        <div class="footer-lists">
+          <ul class="footer-list">
+          </ul>
+          <ul class="footer-list">
+          </ul>
+          <ul class="footer-list">
+          </ul>
+          <ul class="footer-list">
+          </ul>
+          
+        </div>
+
+        <!-- Icônes sociales -->
+
+        <div class="footer-icons" style="margin-top:80px;">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="footer-icons" style="margin-top:5px;">
+          <h6 class="subtitle-text">Value IT Forello Tanjombato</h6>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+</script>

@@ -1,0 +1,572 @@
+/* Arrière-plans personnalisés */
+.container-fluid{
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+.custom-bg-top {
+  /*background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);*/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-bg-second-top {
+  /*background: linear-gradient(135deg, #ddd 0%, #fff 100%);/**/
+  /*height: 100vh;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.custom-bg-bottom {
+  /*background: linear-gradient(135deg, #0a95f6 0%, #002171 100%);/**/
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-bg-second-bottom {
+  background: linear-gradient(135deg,  #ddd 0%,  #fff 100%);/**/
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Zone de téléchargement de fichiers */
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 5px dotted #b4b3b3;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.file-input-container {
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(70, 197, 180, 0.925);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-label:hover {
+  background-color: #0056b3;
+}
+
+.file-preview {
+  text-align: center;
+  width: 100%;
+}
+
+.file-preview .card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.file-preview h4 {
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.file-preview h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.file-preview ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-preview li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.url-column-container {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.upload-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-button:hover {
+  background-color: #218838;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Pied de page */
+.footer {
+  background-color: rgb(255, 255, 255);
+  /*background: linear-gradient(135deg, #ddd 0%, #fff 100%);
+  /*background-color: #003c8f;*/
+  height : 200px;
+  padding: 1rem 0;
+  text-align: center;
+  color: black;
+}
+
+/* Contenu du pied de page */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Les listes dans le pied de page */
+.footer-lists {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 10px;
+}
+
+/* Style des éléments de liste avec un point rouge rosé */
+.footer-list li {
+  position: relative;
+  padding-left: 20px; /* Espacement pour le point */
+  margin-bottom: 10px;
+}
+
+.footer-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #ff5e6c; /* Couleur rouge rosé */
+  border-radius: 50%;
+}
+
+/* Icônes sociales */
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons i {
+  font-size: 24px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-icons i:hover {
+  color: #007bff; /* Changer de couleur au survol */
+}
+
+/* Bouton pour ajouter une règle de validation */
+.add-rule-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-rule-button:hover {
+  background-color: #0056b3;
+}
+
+/* Conteneur pour les règles de validation */
+.validation-rule {
+  width: 100%;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* Champs pour les règles de validation */
+.column-input,
+.date-format-input,
+.default-value-input,
+.action-select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Statut des tâches */
+.task-status {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+}
+
+.task-status.success {
+  background-color: #28a745;
+}
+
+.task-status.error {
+  background-color: #dc3545;
+}
+
+.new-column-input,
+.formula-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Conteneur pour la page entière */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Conteneur pour la section d'importation des fichiers */
+.import-section {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Conteneur général */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Style de bouton de base */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Style pour le bouton d'envoi des fichiers */
+.btn-success {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Style pour le bouton de téléchargement du fichier modifié */
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* Style pour les alertes générales */
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Style pour les alertes d'information (notifications et statut de tâche) */
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* Style pour les alertes d'erreur */
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Style pour les listes de groupe */
+.list-group {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* Style pour les éléments de la liste du groupe */
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: #ffffff;
+}
+/* Style du conteneur des cases */
+.footer-cases {
+  display: flex; /* Utilisation de Flexbox pour une disposition fluide */
+  flex-wrap: wrap; /* Permet au contenu de passer à la ligne suivante si nécessaire */
+  justify-content: center; /* Centre les cases horizontalement */
+  gap: 20px; /* Espacement entre les cases */
+  padding: 20px; /* Espacement interne */
+  background: linear-gradient(135deg, #c9c6c6 0%, #fff 100%);
+  /*background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /*background-color: #003c8f; /* Couleur de fond */
+  /*border-top: 1px solid #dee2e6; /* Bordure supérieure pour délimiter la section */
+}
+
+/* Style des cases */
+.case {
+  flex: 1 1 200px; /* Flex-grow, flex-shrink, flex-basis pour une disposition adaptable */
+  max-width: 250px; /* Largeur maximale pour éviter les débordements */
+  background-color: rgb(255, 255, 255); /* Couleur de fond des cases */
+  border: 10px unset #e0e0e0; /* Bordure légère pour les cases */
+  border-radius: 8px; /* Coins arrondis pour les cases */
+  padding: 10px; /* Espacement interne */
+  text-align: center; /* Centrage du texte */
+  box-shadow: 0 2px 4px rgba(79, 79, 80, 0.411); /* Ombre pour effet de profondeur */
+}
+
+/* Style du contenu des cases */
+.case-content {
+  display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+  flex-direction: column; /* Alignement vertical du contenu */
+  align-items: center; /* Centrage horizontal du contenu */
+}
+
+/* Style du numéro dans la case */
+.case-number {
+  font-size: 2rem; /* Taille de la police pour le numéro */
+  font-weight: bold; /* Poids de la police pour le numéro */
+  color:black;/* #e0e0e0; /* Couleur du numéro */
+  margin-bottom: 10px; /* Espacement sous le numéro */
+}
+
+/* Style du texte dans la case */
+.case-content p {
+  margin: 0; /* Suppression des marges par défaut */
+  font-size: 1rem; /* Taille de la police pour le texte */
+  color:black;/* #e0e0e0; /* Couleur du texte */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title-container {
+   /* Fond violet pour le titre */
+  padding: 20px; /* Espacement autour du titre */
+  border-radius: 8px; /* Coins arrondis */
+  text-align: center; /* Centrage du texte */
+  margin-bottom: 20px; /* Espacement sous le titre */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteneur pour le titre et les fonctionnalités */
+.title-container {
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-text {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.subtitle-text {
+  font-size: 1.2rem;
+  color: #dddddd;
+  margin: 0;
+}
+/* Conteneur des fonctionnalités */
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.feature {
+  text-align: center;
+  margin: 0 15px;
+}
+
+.feature-icon-container {
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.feature-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 5px;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  padding: 5px 10px;
+  background-color: #74cec8; /* Couleur bleu vert pâle */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-weight: bold;
+}
+.violet {
+  background-color: #8A2BE2; /* Violet */
+}
+
+.blue {
+  background-color: #1E90FF; /* Bleu */
+}
+.custom-row-color {
+  background-color: red !important;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.loading-spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+

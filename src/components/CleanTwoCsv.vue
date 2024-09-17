@@ -230,12 +230,12 @@ export default {
       });
 
       try {
-        await axios.get('http://back-csv-analyzer-production.up.railway.app/', {
+        await axios.get('https://back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true
         });
 
         // Envoyer les fichiers au backend
-        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/clean_two_csv', formData, {
+        const response = await axios.post('https://back-csv-analyzer-production.up.railway.app/clean_two_csv', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -247,12 +247,12 @@ export default {
         // Vérifiez périodiquement l'état de la tâche
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`http://back-csv-analyzer-production.up.railway.app/task_status/${taskId}`);
+            const statusResponse = await axios.get(`https://back-csv-analyzer-production.up.railway.app/task_status/${taskId}`);
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `http://back-csv-analyzer-production.up.railway.app/download_cleaned_csv/${taskId}`;
+              this.downloadUrl = `https://back-csv-analyzer-production.up.railway.app/download_cleaned_csv/${taskId}`;
               this.taskStatus = 'Les fichiers ont été traités avec succès.';
               this.notification = null; 
               this.isLoading = false; // Arrêter de charger

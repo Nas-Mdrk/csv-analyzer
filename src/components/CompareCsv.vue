@@ -171,6 +171,7 @@ export default {
        
       } catch (error) {
         console.error('Erreur lors de la comparaison des fichiers CSV :', error);
+        this.isLoading = false; // Arrêter de charger
         this.errorMessage = 'Erreur lors de la comparaison des fichiers CSV.';
       }
     },
@@ -205,6 +206,7 @@ export default {
               this.taskStatus = null;
             } catch (contentError) {
               console.error('Erreur lors de la récupération du contenu des fichiers:', contentError);
+              this.isLoading = false; // Arrêter de charger
               this.errorMessage = 'Erreur lors de la récupération du contenu des fichiers.';
             }
 

@@ -140,7 +140,7 @@ export default {
     async fetchData() {
       this.errorMessage = '';
       try {
-        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/mouvementpercentagebydateandstate', {
+        const response = await axios.post('https://back-csv-analyzer-production.up.railway.app/mouvementpercentagebydateandstate', {
           etat: this.statisticType,
           start_date: this.startDate,
           end_date: this.endDate

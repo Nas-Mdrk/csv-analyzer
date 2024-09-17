@@ -243,11 +243,11 @@ export default {
       formData.append('common_column', this.commonColumn);
 
       try {
-        await axios.get('http://localhost:5000/', {
+        await axios.get('http://back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true
         });
         // Envoyer le fichier au backend
-        const response = await axios.post('http://localhost:5000/clean_csv_duplicate_key', formData, {
+        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/clean_csv_duplicate_key', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -259,14 +259,14 @@ export default {
         // Vérifiez périodiquement l'état de la tâche
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`http://localhost:5000/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`http://back-csv-analyzer-production.up.railway.app/task_status/${taskId}`, {
               withCredentials: true, // Inclure les cookies
             });
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `http://localhost:5000/download_clean_csv/${taskId}`;
+              this.downloadUrl = `http://back-csv-analyzer-production.up.railway.app/download_clean_csv/${taskId}`;
               this.taskStatus = 'Traitement terminé avec succès.';
               this.notification = null; // Hide notification
               this.isLoading = false; // Arrêter de charger

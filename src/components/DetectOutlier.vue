@@ -179,10 +179,10 @@ export default {
 
       try {
         // Vérifiez la connexion au backend
-        await axios.get('http://localhost:5000/', {
+        await axios.get('http://back-csv-analyzer-production.up.railway.app/', {
                 withCredentials: true
         });
-        const response = await axios.post('http://localhost:5000/detect_outliers', formData, {
+        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/detect_outliers', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }, 
@@ -199,7 +199,7 @@ export default {
     },
     async checkTaskResult(taskId) {
       try {
-        const response = await axios.get(`http://localhost:5000/task_result_outlier/${taskId}`, {
+        const response = await axios.get(`http://back-csv-analyzer-production.up.railway.app/task_result_outlier/${taskId}`, {
           withCredentials: true, // Inclure les cookies
         });
         this.taskStatus = null;

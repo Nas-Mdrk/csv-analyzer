@@ -123,7 +123,7 @@ export default {
     async fetchData() {
       this.errorMessage = '';
       try {
-        const response = await axios.post('http://localhost:5000/mouvementpercentage', {
+        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/mouvementpercentage', {
           etat: this.statisticType,
         });
         console.log('Réponse :', response.data); // Affichez les données de la réponse

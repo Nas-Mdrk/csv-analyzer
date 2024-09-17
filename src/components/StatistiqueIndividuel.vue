@@ -136,12 +136,12 @@ export default {
   methods: {
     async updateTable() {
       try {
-        await axios.get('http://back-csv-analyzer-production.up.railway.app/', {
+        await axios.get('https://back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true
         });
         this.errorMessage = ''; 
 
-        const response = await axios.post('http://back-csv-analyzer-production.up.railway.app/mouvementstatistics', {
+        const response = await axios.post('https://back-csv-analyzer-production.up.railway.app/mouvementstatistics', {
           interval: this.timeInterval,
         }, {
           withCredentials: true 

@@ -80,7 +80,7 @@ export default {
   text-decoration: none; /* Suppression du soulignement des liens */
   color: #ffffff; /* Couleur du texte des liens */
   font-weight: 600; /* Poids de la police pour une meilleure lisibilité */
-  font-size: 1.3rem; /* Taille du texte augmentée */
+  font-size: 1.0rem; /* Taille du texte augmentée */
   transition: color 0.3s, transform 0.3s; /* Effets de transition pour les interactions */
 }
 

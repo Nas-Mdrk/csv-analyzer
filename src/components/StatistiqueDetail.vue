@@ -204,12 +204,12 @@ export default {
     async updateTable() {
       try {
         // Première requête pour vérifier la connexion au backend
-        await axios.get('http://back-csv-analyzer-production.up.railway.app/', {
+        await axios.get('https://back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true 
       });
         this.errorMessage = ''; 
 
-        const response = await axios.get(`http://back-csv-analyzer-production.up.railway.app/aggregated_data`, {
+        const response = await axios.get(`https://back-csv-analyzer-production.up.railway.app/aggregated_data`, {
           params: {
             month: this.month,
             year: this.year,

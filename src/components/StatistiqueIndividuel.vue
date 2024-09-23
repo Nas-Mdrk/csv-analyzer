@@ -136,12 +136,12 @@ export default {
   methods: {
     async updateTable() {
       try {
-        await axios.get('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/', {
+        await axios.get('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/', {
           withCredentials: true
         });
         this.errorMessage = ''; 
 
-        const response = await axios.post('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/mouvementstatistics', {
+        const response = await axios.post('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/mouvementstatistics', {
           interval: this.timeInterval,
         }, {
           withCredentials: true 

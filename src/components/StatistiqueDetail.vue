@@ -204,12 +204,12 @@ export default {
     async updateTable() {
       try {
         // Première requête pour vérifier la connexion au backend
-        await axios.get('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/', {
+        await axios.get('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/', {
           withCredentials: true 
       });
         this.errorMessage = ''; 
 
-        const response = await axios.get(`https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/aggregated_data`, {
+        const response = await axios.get(`https://a0a199a3a42d7975642506c97149fb1b.serveo.net/aggregated_data`, {
           params: {
             month: this.month,
             year: this.year,

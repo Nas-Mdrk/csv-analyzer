@@ -157,7 +157,7 @@ export default {
 
       try {
         // Appel pour démarrer la tâche et comparer les fichiers CSV
-        const response = await axios.post('https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/compare_two_csv', formData, {
+        const response = await axios.post('https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/compare_two_csv', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -178,7 +178,7 @@ export default {
     async checkTaskStatus(taskId) {
       const interval = setInterval(async () => {
         try {
-          const statusResponse = await axios.get(`https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/task_status/${taskId}`, {
+          const statusResponse = await axios.get(`https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/task_status/${taskId}`, {
             withCredentials: true,
           });
           const status = statusResponse.data;
@@ -191,7 +191,7 @@ export default {
             this.isLoading = false; // Arrêter de charger
             // Faire appel à l'endpoint pour obtenir le contenu des fichiers
             try {
-              const contentResponse = await axios.get(`https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/get_file_content/${taskId}`, {
+              const contentResponse = await axios.get(`https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/get_file_content/${taskId}`, {
                 withCredentials: true,
               });
 

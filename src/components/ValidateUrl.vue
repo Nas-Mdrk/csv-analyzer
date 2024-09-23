@@ -225,11 +225,11 @@ export default {
       formData.append('url_column', this.urlColumn);
 
       try {
-        await axios.get('https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/', {
+        await axios.get('https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/', {
         withCredentials: true
         });
         // Envoyer le fichier au backend
-        const response = await axios.post('https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/validate_urls', formData, {
+        const response = await axios.post('https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/validate_urls', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -241,14 +241,14 @@ export default {
         // Vérifiez périodiquement l'état de la tâche
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/task_status/${taskId}`, {
               withCredentials: true, // Inclure les cookies
             });
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/download_clean_csv/${taskId}`;
+              this.downloadUrl = `https://fb060ae8c88513c60a6c97a5989c736f.serveo.net/download_clean_csv/${taskId}`;
               this.taskStatus = 'Validation des URLs terminée avec succès.';
               this.notification = null; // Hide notification
               this.isLoading = false; // Arrêter de charger

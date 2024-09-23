@@ -251,11 +251,11 @@ export default {
       formData.append('columns_to_remove', JSON.stringify(columnsToRemoveArray));
 
       try {
-        await axios.get('https://437e500fc5ec4e1caa9d01804e2aedb0.serveo.net/', {
+        await axios.get('https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/', {
           withCredentials: true
         });
 
-        const response = await axios.post('https://437e500fc5ec4e1caa9d01804e2aedb0.serveo.net/remove_columns', formData, {
+        const response = await axios.post('https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/remove_columns', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -266,14 +266,14 @@ export default {
 
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`https://437e500fc5ec4e1caa9d01804e2aedb0.serveo.net/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/task_status/${taskId}`, {
               withCredentials: true, 
             });
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `https://437e500fc5ec4e1caa9d01804e2aedb0.serveo.net/download_clean_csv/${taskId}`;
+              this.downloadUrl = `https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/download_clean_csv/${taskId}`;
               this.taskStatus = 'Traitement terminé avec succès.';
               this.notification = null; 
               this.isLoading = false; // Arrêter de charger

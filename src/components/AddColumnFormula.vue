@@ -197,7 +197,7 @@ export default {
   methods: {
     reloadPage(event) {
       event.preventDefault(); // Empêche le comportement par défaut de recharger automatiquement la page
-      window.location.href = '/add-columnformula'; // Redirige vers la nouvelle page
+      window.location.href = 'https://venerable-bienenstitch-e1bf89.netlify.app/add-columnformula'; // Redirige vers la nouvelle page
       window.location.reload(); // Recharge la page
     },
     handleFile(event) {

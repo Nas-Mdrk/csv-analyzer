@@ -243,11 +243,11 @@ export default {
       formData.append('common_column', this.commonColumn);
 
       try {
-        await axios.get('https://back-csv-analyzer-production.up.railway.app/', {
+        await axios.get('https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/', {
           withCredentials: true
         });
         // Envoyer le fichier au backend
-        const response = await axios.post('https://back-csv-analyzer-production.up.railway.app/clean_csv_duplicate_key', formData, {
+        const response = await axios.post('https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/clean_csv_duplicate_key', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -259,7 +259,7 @@ export default {
         // Vérifiez périodiquement l'état de la tâche
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`https://back-csv-analyzer-production.up.railway.app/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/task_status/${taskId}`, {
               withCredentials: true, // Inclure les cookies
             });
             const status = statusResponse.data;

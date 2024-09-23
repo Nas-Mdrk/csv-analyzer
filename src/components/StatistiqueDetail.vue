@@ -204,12 +204,12 @@ export default {
     async updateTable() {
       try {
         // Première requête pour vérifier la connexion au backend
-        await axios.get('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/', {
+        await axios.get('back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true 
       });
         this.errorMessage = ''; 
 
-        const response = await axios.get(`https://a0a199a3a42d7975642506c97149fb1b.serveo.net/aggregated_data`, {
+        const response = await axios.get(`back-csv-analyzer-production.up.railway.app/aggregated_data`, {
           params: {
             month: this.month,
             year: this.year,

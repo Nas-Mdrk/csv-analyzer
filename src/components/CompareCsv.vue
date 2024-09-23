@@ -130,7 +130,7 @@ export default {
   methods: {
     reloadPage(event) {
       event.preventDefault(); // Empêche le comportement par défaut de recharger automatiquement la page
-      window.location.href = '/compare-csv'; // Redirige vers la nouvelle page
+      window.location.href = 'https://venerable-bienenstitch-e1bf89.netlify.app/compare-csv'; // Redirige vers la nouvelle page
       window.location.reload(); // Recharge la page
     },
     handleFile1Upload(event) {
@@ -157,7 +157,7 @@ export default {
 
       try {
         // Appel pour démarrer la tâche et comparer les fichiers CSV
-        const response = await axios.post('https://back-csv-analyzer-production.up.railway.app/compare_two_csv', formData, {
+        const response = await axios.post('https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/compare_two_csv', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -178,7 +178,7 @@ export default {
     async checkTaskStatus(taskId) {
       const interval = setInterval(async () => {
         try {
-          const statusResponse = await axios.get(`https://back-csv-analyzer-production.up.railway.app/task_status/${taskId}`, {
+          const statusResponse = await axios.get(`https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/task_status/${taskId}`, {
             withCredentials: true,
           });
           const status = statusResponse.data;
@@ -191,7 +191,7 @@ export default {
             this.isLoading = false; // Arrêter de charger
             // Faire appel à l'endpoint pour obtenir le contenu des fichiers
             try {
-              const contentResponse = await axios.get(`https://back-csv-analyzer-production.up.railway.app/get_file_content/${taskId}`, {
+              const contentResponse = await axios.get(`https://1cab02d2a40660d27b1f6edd2403e36b.serveo.net/get_file_content/${taskId}`, {
                 withCredentials: true,
               });
 

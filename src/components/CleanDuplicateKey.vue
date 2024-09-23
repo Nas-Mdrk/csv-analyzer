@@ -266,7 +266,7 @@ export default {
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `https://back-csv-analyzer-production.up.railway.app/download_clean_csv/${taskId}`;
+              this.downloadUrl = `https://ec8e16753dc294db0c9987ecfc82a2bb.serveo.net/download_clean_csv/${taskId}`;
               this.taskStatus = 'Traitement terminé avec succès.';
               this.notification = null; // Hide notification
               this.isLoading = false; // Arrêter de charger

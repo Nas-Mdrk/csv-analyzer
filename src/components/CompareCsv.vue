@@ -38,7 +38,7 @@
             <br>
           </div>
           
-
+ 
           <!-- Affichage des fichiers CSV -->
           <div v-if="file1HtmlContent && file2HtmlContent" class="csv-comparison mt-4">
             <div class="row">

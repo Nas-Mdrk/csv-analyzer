@@ -197,7 +197,7 @@ export default {
   methods: {
     reloadPage(event) {
       event.preventDefault(); // Empêche le comportement par défaut de recharger automatiquement la page
-      window.location.href = 'https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/add-columnformula'; // Redirige vers la nouvelle page
+      window.location.href = 'https://a0a199a3a42d7975642506c97149fb1b.serveo.net/add-columnformula'; // Redirige vers la nouvelle page
       window.location.reload(); // Recharge la page
     },
     handleFile(event) {
@@ -231,11 +231,11 @@ export default {
       formData.append('formula', this.formula);
 
       try {
-        await axios.get('https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/', {
+        await axios.get('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/', {
           withCredentials: true
         });
         // Envoyer le fichier au backend
-        const response = await axios.post('https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/add_column_with_formula', formData, {
+        const response = await axios.post('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/add_column_with_formula', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -247,14 +247,14 @@ export default {
         // Vérifiez périodiquement l'état de la tâche
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`https://a0a199a3a42d7975642506c97149fb1b.serveo.net/task_status/${taskId}`, {
               withCredentials: true, // Inclure les cookies
             });
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `https://c0a44c3a82db72b42e1f39b65877118c.serveo.net/download_clean_csv/${taskId}`;
+              this.downloadUrl = `https://a0a199a3a42d7975642506c97149fb1b.serveo.net/download_clean_csv/${taskId}`;
               this.taskStatus = 'Traitement terminé avec succès.';
               this.notification = null; // Hide notification
               this.isLoading = false; // Arrêter de charger

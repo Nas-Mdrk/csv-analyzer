@@ -143,13 +143,13 @@ export default {
     async updateTable() {
         try {
             // Effectuer la première requête GET pour établir une session ou récupérer des données nécessaires
-            await axios.get('back-csv-analyzer-production.up.railway.app/', {
+            await axios.get('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/', {
                 withCredentials: true
             });
             this.errorMessage = ''; // Réinitialiser le message d'erreur
 
             // Effectuer la requête POST pour obtenir les entrées en fonction du type de statistique
-            const response = await axios.post('back-csv-analyzer-production.up.railway.app/get_entries', {
+            const response = await axios.post('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/get_entries', {
                 etat: this.statisticType, // Inclure le type de statistique dans la requête
             }, {
                 withCredentials: true // Inclure les cookies

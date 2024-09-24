@@ -136,12 +136,12 @@ export default {
   methods: {
     async updateTable() {
       try {
-        await axios.get('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/', {
+        await axios.get('back-csv-analyzer-production.up.railway.app/', {
           withCredentials: true
         });
         this.errorMessage = ''; 
 
-        const response = await axios.post('https://a0a199a3a42d7975642506c97149fb1b.serveo.net/mouvementstatistics', {
+        const response = await axios.post('back-csv-analyzer-production.up.railway.app/mouvementstatistics', {
           interval: this.timeInterval,
         }, {
           withCredentials: true 

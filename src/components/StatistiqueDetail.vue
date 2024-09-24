@@ -209,7 +209,7 @@ export default {
       });
         this.errorMessage = ''; 
 
-        const response = await axios.get(`https://back-csv-analyzer-production.up.railway.app/aggregated_data`, {
+        const response = await axios.get(`http://10.250.19.27:5000/aggregated_data`, {
           params: {
             month: this.month,
             year: this.year,

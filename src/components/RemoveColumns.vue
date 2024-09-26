@@ -251,11 +251,11 @@ export default {
       formData.append('columns_to_remove', JSON.stringify(columnsToRemoveArray));
 
       try {
-        await axios.get('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/', {
+        await axios.get('https://newbackcsv-production.up.railway.app/', {
           withCredentials: true
         });
 
-        const response = await axios.post('https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/remove_columns', formData, {
+        const response = await axios.post('https://newbackcsv-production.up.railway.app/remove_columns', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -266,14 +266,14 @@ export default {
 
         const interval = setInterval(async () => {
           try {
-            const statusResponse = await axios.get(`https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/task_status/${taskId}`, {
+            const statusResponse = await axios.get(`https://newbackcsv-production.up.railway.app/task_status/${taskId}`, {
               withCredentials: true, 
             });
             const status = statusResponse.data;
 
             if (status.state === 'SUCCESS') {
               clearInterval(interval);
-              this.downloadUrl = `https://bffff56dda3a56d68b03fe16bffb7d11.serveo.net/download_clean_csv/${taskId}`;
+              this.downloadUrl = `https://newbackcsv-production.up.railway.app/download_clean_csv/${taskId}`;
               this.taskStatus = 'Traitement terminé avec succès.';
               this.notification = null; 
               this.isLoading = false; // Arrêter de charger

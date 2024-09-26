@@ -26,7 +26,7 @@ module.exports = {
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://newbackcsv-production.up.railway.app',
         changeOrigin: true,
         pathRewrite: { '^/api': '' },
         ws: true, 
